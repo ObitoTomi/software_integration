@@ -8,15 +8,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Suppress TensorFlow logging
-"""
-2025-11-19 15:09:03.254768: I tensorflow/core/util/port.cc:153] oneDNN 
-custom operations are on. You may see slightly different numerical results 
-due to floating-point round-off errors from different computation orders. 
-To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-"""
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
-os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 model_path = os.getenv("MODEL_PATH")
 
